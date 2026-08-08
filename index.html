@@ -1,0 +1,951 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>BALINESIA | Bali Airport Transfer</title>
+<meta name="description" content="Reliable Bali Airport Transfer to your hotel. Comfortable private transfers, professional local drivers and easy WhatsApp booking.">
+
+<style>
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+  color: #111;
+  background: #fff;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  width: 100%;
+  max-width: 1100px;
+  margin: auto;
+  padding: 0 22px;
+}
+
+/* HEADER */
+
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 20;
+  padding: 22px 0;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  color: white;
+  font-size: 23px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.nav-link {
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* HERO */
+
+.hero {
+  min-height: 720px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  color: white;
+  background:
+    linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.55)),
+    url("https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=1800&q=85")
+    center/cover no-repeat;
+}
+
+.hero-content {
+  max-width: 700px;
+  padding-top: 70px;
+}
+
+.hero-label {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+  opacity: .9;
+}
+
+h1 {
+  font-size: clamp(42px, 10vw, 76px);
+  line-height: 1.05;
+  letter-spacing: -2px;
+  margin-bottom: 22px;
+}
+
+.hero p {
+  font-size: 19px;
+  max-width: 600px;
+  color: rgba(255,255,255,.92);
+  margin-bottom: 30px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 28px;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 15px;
+  transition: .2s;
+}
+
+.btn-primary {
+  background: #111;
+  color: white;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+}
+
+/* BOOKING BAR */
+
+.booking-card {
+  margin-top: -55px;
+  position: relative;
+  z-index: 10;
+}
+
+.booking-inner {
+  background: white;
+  border-radius: 18px;
+  padding: 25px;
+  box-shadow: 0 15px 45px rgba(0,0,0,.12);
+}
+
+.booking-title {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.booking-subtitle {
+  color: #666;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.booking-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.field {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 13px 15px;
+}
+
+.field span {
+  display: block;
+  font-size: 11px;
+  color: #777;
+  text-transform: uppercase;
+  letter-spacing: .7px;
+  margin-bottom: 3px;
+}
+
+.field strong {
+  font-size: 14px;
+}
+
+.booking-button {
+  margin-top: 15px;
+  width: 100%;
+  background: #111;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+/* SECTIONS */
+
+section {
+  padding: 85px 0;
+}
+
+.section-label {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #777;
+  margin-bottom: 12px;
+}
+
+.section-title {
+  font-size: clamp(32px, 7vw, 48px);
+  line-height: 1.1;
+  letter-spacing: -1px;
+  margin-bottom: 18px;
+}
+
+.section-text {
+  color: #666;
+  max-width: 650px;
+}
+
+/* WHY */
+
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  margin-top: 45px;
+}
+
+.feature {
+  padding: 25px 20px;
+  border: 1px solid #e8e8e8;
+  border-radius: 14px;
+}
+
+.feature-number {
+  font-size: 12px;
+  color: #999;
+  margin-bottom: 35px;
+}
+
+.feature h3 {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.feature p {
+  color: #777;
+  font-size: 14px;
+}
+
+/* DESTINATIONS */
+
+.destinations {
+  background: #f7f7f5;
+}
+
+.destination-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin-top: 40px;
+}
+
+.destination {
+  background: white;
+  padding: 22px;
+  border-radius: 13px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.destination span {
+  color: #777;
+  font-size: 13px;
+}
+
+/* HOW IT WORKS */
+
+.steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 35px;
+  margin-top: 45px;
+}
+
+.step-number {
+  font-size: 40px;
+  font-weight: 300;
+  margin-bottom: 15px;
+}
+
+.step h3 {
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+.step p {
+  color: #777;
+  font-size: 14px;
+}
+
+/* DRIVER */
+
+.driver {
+  background: #111;
+  color: white;
+}
+
+.driver .section-text {
+  color: #bbb;
+}
+
+.driver-box {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: center;
+}
+
+.driver-list {
+  margin-top: 30px;
+}
+
+.driver-list div {
+  padding: 13px 0;
+  border-bottom: 1px solid #333;
+}
+
+/* FAQ */
+
+.faq-list {
+  max-width: 800px;
+  margin-top: 35px;
+}
+
+details {
+  border-top: 1px solid #ddd;
+  padding: 20px 0;
+}
+
+details:last-child {
+  border-bottom: 1px solid #ddd;
+}
+
+summary {
+  cursor: pointer;
+  font-weight: 700;
+}
+
+details p {
+  color: #666;
+  padding-top: 12px;
+  font-size: 14px;
+}
+
+/* FINAL CTA */
+
+.final-cta {
+  text-align: center;
+  background: #f7f7f5;
+}
+
+.final-cta .section-text {
+  margin: 0 auto 28px;
+}
+
+/* FOOTER */
+
+footer {
+  background: #111;
+  color: white;
+  padding: 45px 0;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.footer-brand {
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.footer-text {
+  color: #888;
+  font-size: 13px;
+  margin-top: 8px;
+}
+
+.copyright {
+  color: #666;
+  font-size: 12px;
+  margin-top: 35px;
+}
+
+/* WHATSAPP */
+
+.whatsapp {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background: #25D366;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+  font-weight: bold;
+  box-shadow: 0 8px 25px rgba(0,0,0,.2);
+  z-index: 50;
+}
+
+/* MOBILE */
+
+@media (max-width: 800px) {
+
+  .hero {
+    min-height: 680px;
+  }
+
+  h1 {
+    font-size: 48px;
+  }
+
+  .hero p {
+    font-size: 17px;
+  }
+
+  .booking-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .why-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .destination-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .steps {
+    grid-template-columns: 1fr;
+  }
+
+  .driver-box {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-content {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 500px) {
+
+  .container {
+    padding: 0 18px;
+  }
+
+  section {
+    padding: 65px 0;
+  }
+
+  .hero {
+    min-height: 650px;
+  }
+
+  h1 {
+    font-size: 43px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  .why-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .destination-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .booking-inner {
+    padding: 20px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="container nav">
+    <div class="logo">BALINESIA</div>
+    <a href="#booking" class="nav-link">Airport Transfer</a>
+  </div>
+</header>
+
+<!-- HERO -->
+
+<section class="hero">
+  <div class="container">
+    <div class="hero-content">
+
+      <div class="hero-label">
+        Bali Airport Transfer
+      </div>
+
+      <h1>
+        Your Bali Arrival Starts Here.
+      </h1>
+
+      <p>
+        Reliable private airport transfers from Bali Airport to your hotel,
+        with a trusted local team and easy WhatsApp booking.
+      </p>
+
+      <a href="#booking" class="btn btn-primary">
+        Book Your Airport Transfer
+      </a>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- BOOKING -->
+
+<div class="booking-card" id="booking">
+  <div class="container">
+
+    <div class="booking-inner">
+
+      <div class="booking-title">
+        Request Your Transfer
+      </div>
+
+      <div class="booking-subtitle">
+        Tell us your arrival details and we'll arrange the rest.
+      </div>
+
+      <div class="booking-grid">
+
+        <div class="field">
+          <span>Pickup</span>
+          <strong>Bali International Airport</strong>
+        </div>
+
+        <div class="field">
+          <span>Destination</span>
+          <strong>Your Hotel / Villa</strong>
+        </div>
+
+        <div class="field">
+          <span>Passengers</span>
+          <strong>Number of Guests</strong>
+        </div>
+
+        <div class="field">
+          <span>Flight</span>
+          <strong>Flight Number</strong>
+        </div>
+
+      </div>
+
+      <a
+        class="btn booking-button"
+        href="https://wa.me/YOUR_WHATSAPP_NUMBER?text=Hello%20BALINESIA%2C%20I%20would%20like%20to%20book%20an%20airport%20transfer."
+      >
+        Continue on WhatsApp
+      </a>
+
+    </div>
+
+  </div>
+</div>
+
+
+<!-- WHY CHOOSE US -->
+
+<section>
+  <div class="container">
+
+    <div class="section-label">Why BALINESIA</div>
+
+    <h2 class="section-title">
+      A smoother way to arrive in Bali.
+    </h2>
+
+    <p class="section-text">
+      From the moment you land, our goal is simple:
+      make your arrival comfortable, easy and stress-free.
+    </p>
+
+    <div class="why-grid">
+
+      <div class="feature">
+        <div class="feature-number">01</div>
+        <h3>Reliable Pickup</h3>
+        <p>
+          Your transfer is arranged around your flight and arrival time.
+        </p>
+      </div>
+
+      <div class="feature">
+        <div class="feature-number">02</div>
+        <h3>Local Team</h3>
+        <p>
+          Friendly local drivers who know Bali and its destinations.
+        </p>
+      </div>
+
+      <div class="feature">
+        <div class="feature-number">03</div>
+        <h3>Comfortable</h3>
+        <p>
+          Private transportation for a relaxed journey to your hotel.
+        </p>
+      </div>
+
+      <div class="feature">
+        <div class="feature-number">04</div>
+        <h3>Easy Booking</h3>
+        <p>
+          No complicated booking system. Simply contact us on WhatsApp.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- DESTINATIONS -->
+
+<section class="destinations">
+
+  <div class="container">
+
+    <div class="section-label">Popular Destinations</div>
+
+    <h2 class="section-title">
+      From Bali Airport to where you're staying.
+    </h2>
+
+    <p class="section-text">
+      Private airport transfers to Bali's most popular areas.
+    </p>
+
+    <div class="destination-grid">
+
+      <div class="destination">
+        <strong>Kuta</strong>
+        <span>Transfer</span>
+      </div>
+
+      <div class="destination">
+        <strong>Legian</strong>
+        <span>Transfer</span>
+      </div>
+
+      <div class="destination">
+        <strong>Seminyak</strong>
+        <span>Transfer</span>
+      </div>
+
+      <div class="destination">
+        <strong>Canggu</strong>
+        <span>Transfer</span>
+      </div>
+
+      <div class="destination">
+        <strong>Sanur</strong>
+        <span>Transfer</span>
+      </div>
+
+      <div class="destination">
+        <strong>Nusa Dua</strong>
+        <span>Transfer</span>
+      </div>
+
+      <div class="destination">
+        <strong>Ubud</strong>
+        <span>Transfer</span>
+      </div>
+
+      <div class="destination">
+        <strong>Jimbaran</strong>
+        <span>Transfer</span>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- HOW IT WORKS -->
+
+<section>
+
+  <div class="container">
+
+    <div class="section-label">How It Works</div>
+
+    <h2 class="section-title">
+      Simple from landing to hotel.
+    </h2>
+
+    <div class="steps">
+
+      <div class="step">
+
+        <div class="step-number">01</div>
+
+        <h3>Send Your Details</h3>
+
+        <p>
+          Contact us on WhatsApp with your flight,
+          hotel, date and number of passengers.
+        </p>
+
+      </div>
+
+      <div class="step">
+
+        <div class="step-number">02</div>
+
+        <h3>Meet Your Driver</h3>
+
+        <p>
+          Your driver will be ready for your arrival
+          and guide you to your vehicle.
+        </p>
+
+      </div>
+
+      <div class="step">
+
+        <div class="step-number">03</div>
+
+        <h3>Relax & Enjoy Bali</h3>
+
+        <p>
+          Sit back and enjoy a comfortable private
+          transfer to your destination.
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- DRIVER / SERVICE -->
+
+<section class="driver">
+
+  <div class="container">
+
+    <div class="driver-box">
+
+      <div>
+
+        <div class="section-label">
+          Your Arrival Matters
+        </div>
+
+        <h2 class="section-title">
+          Travel with peace of mind.
+        </h2>
+
+        <p class="section-text">
+          Bali can feel busy when you first arrive.
+          We make your airport transfer simple,
+          comfortable and organised from the beginning.
+        </p>
+
+      </div>
+
+      <div class="driver-list">
+
+        <div>Private airport transfer</div>
+        <div>Professional local driver</div>
+        <div>Comfortable vehicle</div>
+        <div>Direct hotel drop-off</div>
+        <div>WhatsApp communication</div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- FAQ -->
+
+<section>
+
+  <div class="container">
+
+    <div class="section-label">FAQ</div>
+
+    <h2 class="section-title">
+      Frequently asked questions.
+    </h2>
+
+    <div class="faq-list">
+
+      <details>
+        <summary>What details do I need to book?</summary>
+        <p>
+          Please send us your number of passengers,
+          hotel or destination, flight number and arrival date.
+        </p>
+      </details>
+
+      <details>
+        <summary>What happens if my flight is delayed?</summary>
+        <p>
+          Send us your flight details when booking.
+          We can use your flight information to coordinate your arrival.
+        </p>
+      </details>
+
+      <details>
+        <summary>Where will I meet my driver?</summary>
+        <p>
+          After confirmation, we will provide clear pickup instructions
+          and the meeting point through WhatsApp.
+        </p>
+      </details>
+
+      <details>
+        <summary>Can I book a return airport transfer?</summary>
+        <p>
+          Yes. We can arrange both your arrival and departure transfers.
+        </p>
+      </details>
+
+      <details>
+        <summary>Can I ask about Bali activities too?</summary>
+        <p>
+          Yes. Contact our team on WhatsApp and ask about
+          Bali activities and experiences.
+        </p>
+      </details>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- FINAL CTA -->
+
+<section class="final-cta">
+
+  <div class="container">
+
+    <div class="section-label">
+      BALINESIA
+    </div>
+
+    <h2 class="section-title">
+      Arrive in Bali with peace of mind.
+    </h2>
+
+    <p class="section-text">
+      Your Bali journey starts with a smooth arrival.
+    </p>
+
+    <br>
+
+    <a
+      class="btn btn-primary"
+      href="https://wa.me/YOUR_WHATSAPP_NUMBER?text=Hello%20BALINESIA%2C%20I%20would%20like%20to%20book%20an%20airport%20transfer."
+    >
+      Book via WhatsApp
+    </a>
+
+  </div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+  <div class="container">
+
+    <div class="footer-content">
+
+      <div>
+        <div class="footer-brand">
+          BALINESIA
+        </div>
+
+        <div class="footer-text">
+          Bali Airport Transfer
+        </div>
+      </div>
+
+      <div class="footer-text">
+        Airport • Hotel • Bali
+      </div>
+
+    </div>
+
+    <div class="copyright">
+      © 2026 BALINESIA. All rights reserved.
+    </div>
+
+  </div>
+
+</footer>
+
+
+<!-- FLOATING WHATSAPP -->
+
+<a
+  class="whatsapp"
+  href="https://wa.me/YOUR_WHATSAPP_NUMBER?text=Hello%20BALINESIA%2C%20I%20would%20like%20to%20book%20an%20airport%20transfer."
+  aria-label="WhatsApp"
+>
+  ☎
+</a>
+
+</body>
+</html>
